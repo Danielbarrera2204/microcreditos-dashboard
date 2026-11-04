@@ -4,12 +4,6 @@ venv/
 __pycache__/
 *.pyc
 
-# Base de datos local (se regenera con db/init_db.py)
-db/*.db
-
-# CSV descargados de Kaggle (cada integrante los descarga)
-data/raw/*.csv
-data/raw/*.zip
 
 # Sistema operativo y editor
 .DS_Store
