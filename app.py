@@ -335,7 +335,7 @@ def pestana_registros() -> None:
 
 
 # ------------------------------------------------------------------- aplicación
-def main() -> None:
+def modulo_operativo() -> None:
     st.title("💳 Microcréditos · Módulo operativo")
     if not DB_PATH.exists():
         st.error(
@@ -362,4 +362,8 @@ def main() -> None:
         pestana_registros()
 
 
-main()
+pagina = st.navigation([
+    st.Page(modulo_operativo, title="Módulo operativo", icon="🧾", default=True),
+    st.Page("dashboard.py", title="Dashboard gerencial", icon="📊"),
+])
+pagina.run()
